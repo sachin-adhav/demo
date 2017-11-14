@@ -69,48 +69,49 @@
     </ul>
 	<h3> Registration</h3>	
 	<hr class="soft"/>
-	<div class="well">
-	<form class="form-horizontal">
+	<div class="well">	
+	<form class="form-horizontal" action="<?php echo base_url()."home/saveRegistrationInfo";?>" method="post">
 		<h3>Your Personal Details</h3>
 		<div class="control-group">
 		<label class="control-label">Title <sup>*</sup></label>
 		<div class="controls">
-		<select class="span1" name="days">
+		<select class="span1" name="title" id="title_id">
 			<option value="">-</option>
 			<option value="1">Mr.</option>
 			<option value="2">Mrs</option>
 			<option value="3">Miss</option>
 		</select>
+		<span class="error" id="title_err" style="color:red;color:red;margin-left: 20px; display: none;">Select title</span>
 		</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputFname">First name <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" id="inputFname" placeholder="First Name">
+			  <input type="text" id="inputFname" placeholder="First Name" name="fname"><span id="fname_err" class="error" style="color:red;color:red;margin-left: 20px; display: none;">Enter your first name</span>
 			</div>
 		 </div>
 		 <div class="control-group">
 			<label class="control-label" for="inputLname">Last name <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" id="inputLname" placeholder="Last Name">
+			  <input type="text" id="inputLname" placeholder="Last Name" name="lname"><span id="lname_err" class="error" style="color:red;color:red;margin-left: 20px; display: none;">Enter your last name</span>
 			</div>
 		 </div>
 		<div class="control-group">
 		<label class="control-label" for="inputEmail">Email <sup>*</sup></label>
 		<div class="controls">
-		  <input type="text" placeholder="Email">
+		  <input type="email" id="inputEmail" placeholder="Email" name="email"><span class="error" id="email_err" style="color:red;color:red;margin-left: 20px; display: none;">Enter your email address</span>
 		</div>
 	  </div>	  
 		<div class="control-group">
 		<label class="control-label">Password <sup>*</sup></label>
 		<div class="controls">
-		  <input type="password" placeholder="Password">
+		  <input type="password" id="inputPassword" placeholder="Password" name="password"><span class="error" id="password_err" style="color:red;color:red;margin-left: 20px; display: none;">Enter your password</span>
 		</div>
 	  </div>
 		<div class="control-group">
 		<label class="control-label">Date of Birth <sup>*</sup></label>
 		<div class="controls">
-		  <select class="span1" name="days">
+		  <select class="span1" name="birthdate">
 				<option value="">-</option>
 					<option value="1">1&nbsp;&nbsp;</option>
 					<option value="2">2&nbsp;&nbsp;</option>
@@ -120,7 +121,7 @@
 					<option value="6">6&nbsp;&nbsp;</option>
 					<option value="7">7&nbsp;&nbsp;</option>
 			</select>
-			<select class="span1" name="days">
+			<select class="span1" name="birthmonth">
 				<option value="">-</option>
 					<option value="1">1&nbsp;&nbsp;</option>
 					<option value="2">2&nbsp;&nbsp;</option>
@@ -130,7 +131,7 @@
 					<option value="6">6&nbsp;&nbsp;</option>
 					<option value="7">7&nbsp;&nbsp;</option>
 			</select>
-			<select class="span1" name="days">
+			<select class="span1" name="birthyead">
 				<option value="">-</option>
 					<option value="1">1&nbsp;&nbsp;</option>
 					<option value="2">2&nbsp;&nbsp;</option>
@@ -140,53 +141,21 @@
 					<option value="6">6&nbsp;&nbsp;</option>
 					<option value="7">7&nbsp;&nbsp;</option>
 			</select>
+			<span class="error" id="dateofbirth_err" style="color:red;margin-left: 20px; display: none;">Select your date of birth</span>
 		</div>
 	  </div>
 	<div class="control-group">
 		<div class="controls">
-		 <input type="submit" name="submitAccount" value="Register" class="exclusive shopBtn">
-		</div>
-	</div>
-	</form>
-</div>
-
-<div class="well">
-	<form class="form-horizontal" >
-		<h3>Your Billing Details</h3>
-		<div class="control-group">
-			<label class="control-label">Fiels label <sup>*</sup></label>
-			<div class="controls">
-			  <input type="text" placeholder=" Field name">
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label">Fiels label <sup>*</sup></label>
-			<div class="controls">
-			  <input type="text" placeholder=" Field name">
-			</div>
-		</div>
-		 <div class="control-group">
-			<label class="control-label">Fiels label <sup>*</sup></label>
-			<div class="controls">
-			  <input type="text" placeholder=" Field name">
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label">Fiels label <sup>*</sup></label>
-			<div class="controls">
-			  <textarea></textarea>
-			</div>
-		</div>
-	<div class="control-group">
-		<div class="controls">
-		 <input type="submit" name="submitAccount" value="Register" class="shopBtn exclusive">
+		 <input type="submit" name="submitAccount" value="Register" onclick="return validateRegistrationForm();" class="exclusive shopBtn">
 		</div>
 	</div>
 	</form>
 </div>
 
 
-<div class="well">
+
+
+<!--<div class="well">
 	<form class="form-horizontal" >
 		<h3>Your Account Details</h3>
 		<div class="control-group">
@@ -266,7 +235,7 @@
 		</div>
 	</div>
 	</form>
-</div>
+</div>-->
 
 
 </div>

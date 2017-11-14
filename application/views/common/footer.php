@@ -86,5 +86,6 @@ accompanied by English versions from the 1914 translation by H. Rackham.
 	<script src="<?php echo base_url();?>assets/js/jquery.easing-1.3.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="<?php echo base_url();?>assets/js/shop.js"></script>
+    <script src="<?php echo base_url();?>assets/js/custom.js"></script>
   </body>
 </html>

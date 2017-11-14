@@ -31,4 +31,11 @@ class Home extends CI_Controller {
 		$this->load->view('registration');
 		$this->load->view('common/footer');
 	}
+
+	public function saveRegistrationInfo(){
+		$postdata = $this->input->post();
+		print_r($postdata); die("PostData");
+		$query = $this->db->query("Select id from users where email = '".$postdata['email']."'");
+			$this->db->insert("users", array('firstName' => $postdata['fname'], 'lastName' => $postdata['lname'], 'email' => $postdata['email'], 'password' => $postdata['password'], 'title' => $postdata['title']));
+	}
 }
