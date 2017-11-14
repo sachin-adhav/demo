@@ -62,6 +62,7 @@
 		  </ul>
 
 	</div>
+
 	<div class="span9">
     <ul class="breadcrumb">
 		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
@@ -69,6 +70,17 @@
     </ul>
 	<h3> Registration</h3>	
 	<hr class="soft"/>
+	<?php if(isset($success_message)){?>
+		<div class="well">	
+			<h3 class="success-message" style="color: green;"><?php echo $success_message; ?></h3>
+		</div>
+	<?php } 
+		if(isset($error_msg)){
+	?>
+		<div class="well">	
+			<h3 class="error-message" style="color: red;"><?php echo $error_msg; ?></h3>
+		</div>
+	<?php } ?>
 	<div class="well">	
 	<form class="form-horizontal" action="<?php echo base_url()."home/saveRegistrationInfo";?>" method="post">
 		<h3>Your Personal Details</h3>

@@ -33,9 +33,28 @@ class Home extends CI_Controller {
 	}
 
 	public function saveRegistrationInfo(){
-		$postdata = $this->input->post();
-		print_r($postdata); die("PostData");
-		$query = $this->db->query("Select id from users where email = '".$postdata['email']."'");
-			$this->db->insert("users", array('firstName' => $postdata['fname'], 'lastName' => $postdata['lname'], 'email' => $postdata['email'], 'password' => $postdata['password'], 'title' => $postdata['title']));
+		if($this->input->post()){
+			$postdata = $this->input->post();
+			$query = $this->db->query("Select id from users where email = '".$postdata['email']."'")->row();
+			if(empty($query->id)){	
+				$this->db->trans_start();
+				$this->db->insert("users", array('firstName' => $postdata['fname'], 'lastName' => $postdata['lname'], 'email' => $postdata['email'], 'password' => $postdata['password'], 'title' => $postdata['title'], 'updated_date' => date("Y-m-d H:i:s")));
+				$this->db->trans_complete();
+				if ($this->db->trans_status() != FALSE) {
+	               $data['success_message'] = "Successfully Registered";
+	           } else {
+	               $data['error_msg'] = "Something went wrong";
+	           }
+				
+			}else{
+				$data['error_msg'] = "You have already registered with this email";
+			}
+
+			$this->load->view('common/header');
+			$this->load->view('registration', $data);
+			$this->load->view('common/footer');
+		}else{
+			redirect(base_url()."home/registration", "refresh");
+		}
 	}
 }
