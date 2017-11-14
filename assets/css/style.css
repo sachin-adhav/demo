@@ -1,0 +1,521 @@
+
+body {
+    background: rgba(0, 0, 0, 0) url("../img/white-leather.png") repeat scroll 0 0;
+}
+#header {
+    padding: 8px 0;
+}
+#header a {
+    text-decoration: none;
+}
+#header p {
+    font-size: 100%;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+#header h1 {
+    line-height: 1em;
+    margin: 0;
+}
+#header h1.dotmark {
+    line-height: 1.5em;
+}
+#header {
+    padding-top: 44px;
+}
+.logo {
+    display: block;
+    padding-top: 11px;
+}
+.logo span {
+    display: none;
+}
+.dotmark {
+    background: #fff none repeat scroll 0 0;
+    border: 1px dashed rgb(252, 111, 0);
+    color: rgb(252, 111, 0);
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 4px;
+    position: relative;
+}
+.dotmark:hover {
+    background: rgb(252, 111, 0) none repeat scroll 0 0;
+    border: 1px dashed #fff;
+    color: #fff;
+}
+.dotmark i {
+    font-size: 21px;
+    left: 10%;
+    position: absolute;
+    top: -12px;
+}
+.offerNoteWrapper {
+    border: 6px solid #fff;
+    margin: 6px;
+}
+.offerNoteWrapper:hover {
+    border-color: rgb(252, 111, 0);
+}
+h3 {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+hr.soften {
+    background: #ddd none repeat scroll 0 0;
+    margin: 8px 0;
+}
+.moreOptopm.carousel .carousel-control, .moreOptopm.carousel .carousel-control:hover {
+    background: transparent none repeat scroll 0 0;
+}
+.moreOptopm.carousel .carousel-control {
+    border: 0 none;
+    bottom: 0;
+    top: 50%;
+}
+.moreOptopm.carousel .carousel-control.right, .moreOptopm.carousel .carousel-control.right:hover {
+    right: 0;
+}
+.moreOptopm.carousel .carousel-control.left, .moreOptopm.carousel .carousel-control.left:hover {
+    left: 0;
+}
+.moreOptopm.carousel .carousel-control, .moreOptopm.carousel .carousel-control:hover {
+    color: #000;
+}
+.homCar {
+    overflow: hidden;
+}
+.navbar .brand {
+    color: black;
+    font-size: 37px;
+    padding: 0 20px;
+}
+.spaceBtm {
+    padding-bottom: 8px;
+}
+#myCarousel.homCar .item img {
+    max-height: 400px;
+    width: 100%;
+}
+#myCarousel .btn {
+    border: 0 none;
+    border-radius: 0;
+    bottom: 49px;
+    font-size: 18px;
+    line-height: 42px;
+    padding: 0 28px;
+    position: absolute;
+    right: 0;
+    text-shadow: 0 0 0 transparent;
+}
+#myCarousel {
+    margin: 0;
+    position: relative;
+}
+.navbar-inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+.thumbnail .btn {
+    border-radius: 0;
+}
+.thumbnail h4 {
+    line-height: 42px;
+}
+.thumbnail img {
+    max-width: 100%;
+}
+.thumbnail:hover {
+    border: 1px solid #cacaca;
+}
+.form-horizontal.qtyFrm .control-label {
+    text-align: left;
+}
+.form-horizontal.qtyFrm .control-label span {
+    font-size: 18px;
+}
+.clr {
+    clear: both;
+}
+.moreOptopm.carousel .item img {
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+.moreOptopm.carousel .item img:hover {
+    border: 1px solid pink;
+}
+.carousel .item > img {
+    display: inline;
+}
+.moreOptopm {
+    min-height: 116px;
+}
+#productDetail {
+    margin-bottom: 0;
+}
+.tabWrapper {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: -moz-use-text-color #ddd #ddd;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    padding: 14px;
+}
+#productView .btn-toolbar {
+    padding-left: 3px;
+}
+.carousel-control {
+    border: 0 none;
+    border-radius: 2px;
+}
+.carousel-control, .carousel-control:hover {
+    background: rgba(248, 118, 16, 1) none repeat scroll 0 0;
+    color: #fff;
+    height: 43px;
+    line-height: 34px;
+}
+.carousel-control {
+    top: 50%;
+}
+.homCar h4 {
+    background-color: #eb4800;
+    color: #fff;
+    float: left;
+    font-size: 26px;
+    opacity: 0.8;
+    padding: 11px 4px;
+    text-transform: uppercase;
+    width: auto;
+}
+.homCar p span {
+    background-color: #fff;
+    color: #000;
+    float: left;
+    font-size: 28px;
+    line-height: 30px;
+    opacity: 0.8;
+    padding: 2px 10px;
+    width: auto;
+}
+.carousel-control.left {
+    left: -15600px;
+}
+.carousel-control.right {
+    right: -15600px;
+}
+.carousel:hover .carousel-control.right {
+    left: auto;
+    right: 8px;
+}
+.carousel:hover .carousel-control.left {
+    left: 8px;
+}
+.alignR {
+    text-align: right;
+}
+.control-label.alignL, .alignL {
+    text-align: left;
+}
+.loginFrm {
+    margin-bottom: 8px;
+}
+.loginFrm .control-group {
+    margin-bottom: 0;
+    padding: 8px 14px 0;
+}
+.navbar .pull-right > li > .dropdown-menu, .navbar .nav > li > .dropdown-menu.pull-right {
+    border-color: #ccc;
+    border-radius: 0;
+    left: auto;
+    right: 0;
+}
+.navbar .nav, .marginLess {
+    margin: 0;
+}
+.navbar-search .search-query {
+    border-radius: 1px;
+    line-height: 1.5em;
+    min-width: 200px;
+    padding: 4px 14px;
+}
+.navbar-search {
+    margin-left: 6px;
+}
+.actionList a {
+    color: #444;
+    font-size: 11px;
+    width: 50%;
+}
+.caption p, .caption h4 {
+    margin: 0;
+}
+.thumbnail .caption {
+    background: #f3f2f2 none repeat scroll 0 0;
+    color: #555;
+    padding: 9px;
+}
+.footer {
+    background-color: #222;
+    color: #eee;
+    margin-top: 18px;
+    padding: 28px 8px 18px;
+}
+.footer a {
+    color: #bbb;
+    font-size: 12px;
+}
+.copyright {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0 3px #b1afaf;
+    clear: both;
+    font-size: 13px;
+    padding: 8px;
+}
+.topNav {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 3px #b1afaf;
+    padding: 0;
+}
+.topNav a {
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 4px;
+}
+.topNav a:hover, .topNav a.active {
+    background: #f89406 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.socialNw a {
+    background: #999 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 21px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 3px;
+    padding: 3px;
+    text-align: center;
+    width: 24px;
+}
+.cntr {
+    text-align: center;
+}
+.cart {
+    border: 1px solid #ddd;
+}
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+#sidebar .alert {
+    padding: 8px;
+}
+#sidebar .nav a {
+    color: #000;
+}
+#sidebar .nav a:hover {
+    color: #f89406;
+}
+#sidebar .cart {
+    border: 1px solid #b94a48;
+}
+#sidebar h4 {
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 13px;
+}
+#sidebar h2 {
+    font-size: 21px;
+    line-height: 21px;
+}
+#sidebar a.defaultBtn:hover, .defaultBtn:hover {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+#sidebar .nav a.zoomTool {
+    color: #fff;
+}
+.thumbnail > a {
+    display: block;
+    text-align: center;
+}
+.carousel-caption {
+    background: transparent none repeat scroll 0 0;
+}
+#compairTbl td {
+    text-align: center;
+}
+.justify {
+    text-align: justify;
+}
+.table td[align="right"] {
+    text-align: right;
+}
+.thumbnail h5, .thumbnail p {
+    text-align: center;
+}
+.bs-docs-sidenav > li > a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+}
+.thumbnail {
+    position: relative;
+}
+.tag {
+    background: rgba(0, 0, 0, 0) url("../img/new.png") no-repeat scroll 0 0;
+    display: block;
+    height: 48px;
+    position: absolute;
+    right: -18px;
+    top: -4px;
+    width: 48px;
+}
+.np {
+    padding: 0;
+}
+.totalInCart {
+    line-height: 26px;
+}
+.absoluteBlk {
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 45%;
+}
+.relative {
+    position: relative;
+}
+.socialMedia .on, .socialMedia:hover .off {
+    display: block;
+}
+.socialMedia .off, .socialMedia:hover .on {
+    display: none;
+}
+#newProductCar .carousel-control {
+    background: #ffa300 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 1.5em;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: -48px;
+    width: 24px;
+}
+#newProductCar .carousel-control.right {
+    left: auto;
+    right: 8px;
+}
+#newProductCar .carousel-control.left {
+    left: auto;
+    right: 38px;
+}
+#newProductCar {
+    margin-bottom: 0;
+}
+.zoomTool {
+    background: #f89406 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    height: 34px;
+    left: 50%;
+    line-height: 34px;
+    margin-left: -60px;
+    position: absolute;
+    text-align: center;
+    top: 44%;
+    width: 120px;
+    z-index: 999;
+}
+.thumbnail {
+    background: #fff none repeat scroll 0 0;
+}
+.zoomTool:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.thumbnail > a.overlay, .thumbnail > a.zoomTool {
+    display: none;
+}
+.shopBtn {
+    background: #f89406 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    min-height: 34px;
+    padding: 0 12px;
+    text-align: center;
+}
+.defaultBtn {
+    background: #e6e6e6 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 2px;
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    min-height: 34px;
+    padding: 0 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.shopBtn:hover {
+    background: #f86706 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.gotop {
+    background-color: #000;
+    bottom: 30px;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    line-height: 34px;
+    padding: 0 10px 5px;
+    position: fixed;
+    right: 30px;
+    text-decoration: none;
+}
+.gotop:hover {
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+#gototop {
+    margin-top: 1px;
+}
+#footerMenu a {
+    font-size: 12px;
+    text-transform: lowercase;
+}
