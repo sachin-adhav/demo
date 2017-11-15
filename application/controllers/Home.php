@@ -40,6 +40,7 @@ class Home extends CI_Controller {
 		}else{
 			redirect(base_url()."home/", "refresh");
 		}
+		
 	}
 
 	public function saveRegistrationInfo(){
