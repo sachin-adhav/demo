@@ -106,26 +106,27 @@ Navigation Bar Section
 			<ul class="nav pull-right">
 			<li class="dropdown">
 				<?php if($this->session->userdata('Email')){ ?>
-					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Hi, <?php echo $this->session->userdata('FirstName')." ".$this->session->userdata('LastName') ?> <b class="caret"></b></a>
+					<a class="dropdown-toggle" href="#"><span class="icon-lock"></span> Hi, <?php echo $this->session->userdata('FirstName')." ".$this->session->userdata('LastName') ?> <b class="caret"></b></a>
+					<a class="dropdown-toggle" href="<?php echo base_url()."home/signout"; ?>"><span class="icon-lock"></span> Sign Out <b class="caret"></b></a>
 				<?php }else{ ?>
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
 				<?php } ?>
 				<div class="dropdown-menu">
-				<div class="control-group">
-					<input type="email" class="span2" id="inputLoginEmail" placeholder="Email">
-					<span class="error" id="LoginEmail_err" style="color:red; display:none;"></span>
-				  </div>
-				  <div class="control-group">
-					<input type="password" class="span2" id="inputLoginPassword" placeholder="Password">
-					<span class="error" id="LoginPassword_err" style="color:red; display:none;"></span>
-				  </div>
-				  <div class="control-group">
-					<label class="checkbox">
-					<input type="checkbox"> Remember me
-					</label>
-					<button type="submit" id="LoginButton" class="shopBtn btn-block">Sign in</button>
-					<span class="error" id="Loginerror_err" style="color:red; display:none;"></span>
-				  </div>
+					<div class="control-group">
+						<input type="email" class="span2" id="inputLoginEmail" placeholder="Email">
+						<span class="error" id="LoginEmail_err" style="color:red; display:none;"></span>
+				  	</div>
+					  <div class="control-group">
+						<input type="password" class="span2" id="inputLoginPassword" placeholder="Password">
+						<span class="error" id="LoginPassword_err" style="color:red; display:none;"></span>
+					  </div>
+					  <div class="control-group">
+						<label class="checkbox">
+						<input type="checkbox"> Remember me
+						</label>
+						<button type="submit" id="LoginButton" class="shopBtn btn-block">Sign in</button>
+						<span class="error" id="Loginerror_err" style="color:red; display:none;"></span>
+					  </div>
 				</div>
 			</li>
 			</ul>

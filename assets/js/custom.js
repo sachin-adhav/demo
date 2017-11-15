@@ -23,8 +23,8 @@ $( document ).ready(function() {
             url: url+'home/signIn',
             data: {loginemail: email, loginpassword: password},
             success: function (result) {
-              var data = $.parseJSON(result);
-              console.log("Result :- "+data.success); 
+              var data = result;
+              console.log("Success :- "+data.success);
               if(data.error){
                 if(data.error == "Record not found"){
                   $("#Loginerror_err").css("display", "block");
@@ -34,7 +34,7 @@ $( document ).ready(function() {
                   $("#Loginerror_err").html("Something went wrong");
                 }
               }else if(data.success == "Login Successfully"){
-                window.location.href = url;
+                window.location.href = url+"home/";
               } 
             },
             error: function (result) {

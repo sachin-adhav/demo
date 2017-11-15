@@ -33,9 +33,13 @@ class Home extends CI_Controller {
 
 	public function registration()
 	{
-		$this->load->view('common/header');
-		$this->load->view('registration');
-		$this->load->view('common/footer');
+		if(!$this->session->userdata()){
+			$this->load->view('common/header');
+			$this->load->view('registration');
+			$this->load->view('common/footer');
+		}else{
+			redirect(base_url()."home/", "refresh");
+		}
 	}
 
 	public function saveRegistrationInfo(){
@@ -100,7 +104,17 @@ class Home extends CI_Controller {
 		}else{
 			$data['error'] = "Something went wrong";
 		}
-
 		echo json_encode($data);
+	}
+
+	public function signout(){
+		$array_items = array(
+				"FirstName" => "",
+				"LastName" => "",
+				"Email" => "",
+					);
+		$this->session->unset_userdata($array_items);
+		$this->session->sess_destroy();
+		redirect(base_url()."home/", "refresh");
 	}
 }
