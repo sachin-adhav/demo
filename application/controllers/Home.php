@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->library("session");
+        $this->load->library('form_validation');
     }
 
 	public function index()
@@ -45,12 +46,10 @@ class Home extends CI_Controller {
 
 	public function saveRegistrationInfo(){
 		if($this->input->post()){
-			$this->load->library('form_validation');
-
-			$this->form_validation->set_rules("title", "title", "required");
-			$this->form_validation->set_rules("fname", "first name", "trim|required|name");
-			$this->form_validation->set_rules("lname", "first name", "trim|required|name");
-			$this->form_validation->set_rules("email", "email address", "trim|required|email");
+			
+			$this->form_validation->set_rules("fname", "first name", "trim|required");
+			$this->form_validation->set_rules("lname", "Last name", "trim|required");
+			$this->form_validation->set_rules("email", "email address", "trim|required|valid_email|xss_clean");
 			$this->form_validation->set_rules("password", "password", "required");
 			
 			if($this->form_validation->run() == TRUE){
