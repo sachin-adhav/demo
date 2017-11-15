@@ -80,6 +80,12 @@
 		<div class="well">	
 			<h3 class="error-message" style="color: red;"><?php echo $error_msg; ?></h3>
 		</div>
+	<?php } 
+	if(validation_errors()){
+	?>
+	<div class="well">	
+		<h6 class="error-message" style="color: red;"><?php echo validation_errors(); ?></h6>
+	</div>
 	<?php } ?>
 	<div class="well">	
 	<form class="form-horizontal" action="<?php echo base_url()."home/saveRegistrationInfo";?>" method="post">
@@ -120,45 +126,9 @@
 		  <input type="password" id="inputPassword" placeholder="Password" name="password"><span class="error" id="password_err" style="color:red;color:red;margin-left: 20px; display: none;">Enter your password</span>
 		</div>
 	  </div>
-		<div class="control-group">
-		<label class="control-label">Date of Birth <sup>*</sup></label>
-		<div class="controls">
-		  <select class="span1" name="birthdate">
-				<option value="">-</option>
-					<option value="1">1&nbsp;&nbsp;</option>
-					<option value="2">2&nbsp;&nbsp;</option>
-					<option value="3">3&nbsp;&nbsp;</option>
-					<option value="4">4&nbsp;&nbsp;</option>
-					<option value="5">5&nbsp;&nbsp;</option>
-					<option value="6">6&nbsp;&nbsp;</option>
-					<option value="7">7&nbsp;&nbsp;</option>
-			</select>
-			<select class="span1" name="birthmonth">
-				<option value="">-</option>
-					<option value="1">1&nbsp;&nbsp;</option>
-					<option value="2">2&nbsp;&nbsp;</option>
-					<option value="3">3&nbsp;&nbsp;</option>
-					<option value="4">4&nbsp;&nbsp;</option>
-					<option value="5">5&nbsp;&nbsp;</option>
-					<option value="6">6&nbsp;&nbsp;</option>
-					<option value="7">7&nbsp;&nbsp;</option>
-			</select>
-			<select class="span1" name="birthyead">
-				<option value="">-</option>
-					<option value="1">1&nbsp;&nbsp;</option>
-					<option value="2">2&nbsp;&nbsp;</option>
-					<option value="3">3&nbsp;&nbsp;</option>
-					<option value="4">4&nbsp;&nbsp;</option>
-					<option value="5">5&nbsp;&nbsp;</option>
-					<option value="6">6&nbsp;&nbsp;</option>
-					<option value="7">7&nbsp;&nbsp;</option>
-			</select>
-			<span class="error" id="dateofbirth_err" style="color:red;margin-left: 20px; display: none;">Select your date of birth</span>
-		</div>
-	  </div>
 	<div class="control-group">
 		<div class="controls">
-		 <input type="submit" name="submitAccount" value="Register" onclick="return validateRegistrationForm();" class="exclusive shopBtn">
+		 <input type="submit" name="submitAccount" value="Register" onclick="return validateRegistrationForm();" class="exclusive shopBtn"> <!-- onclick="return validateRegistrationForm();" -->
 		</div>
 	</div>
 	</form>

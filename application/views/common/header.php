@@ -27,6 +27,7 @@
 <!-- 
 	Upper Header Section 
 -->
+<input type="hidden" id="base_url" value="<?php echo base_url();?>" />
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="topNav">
 		<div class="container">
@@ -104,22 +105,27 @@ Navigation Bar Section
 			</form>
 			<ul class="nav pull-right">
 			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
+				<?php if($this->session->userdata('Email')){ ?>
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Hi, <?php echo $this->session->userdata('FirstName')." ".$this->session->userdata('LastName') ?> <b class="caret"></b></a>
+				<?php }else{ ?>
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
+				<?php } ?>
 				<div class="dropdown-menu">
-				<form class="form-horizontal loginFrm">
-				  <div class="control-group">
-					<input type="text" class="span2" id="inputEmail" placeholder="Email">
+				<div class="control-group">
+					<input type="email" class="span2" id="inputLoginEmail" placeholder="Email">
+					<span class="error" id="LoginEmail_err" style="color:red; display:none;"></span>
 				  </div>
 				  <div class="control-group">
-					<input type="password" class="span2" id="inputPassword" placeholder="Password">
+					<input type="password" class="span2" id="inputLoginPassword" placeholder="Password">
+					<span class="error" id="LoginPassword_err" style="color:red; display:none;"></span>
 				  </div>
 				  <div class="control-group">
 					<label class="checkbox">
 					<input type="checkbox"> Remember me
 					</label>
-					<button type="submit" class="shopBtn btn-block">Sign in</button>
+					<button type="submit" id="LoginButton" class="shopBtn btn-block">Sign in</button>
+					<span class="error" id="Loginerror_err" style="color:red; display:none;"></span>
 				  </div>
-				</form>
 				</div>
 			</li>
 			</ul>
