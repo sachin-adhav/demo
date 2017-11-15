@@ -40,7 +40,9 @@
 				</div>
 				<a href="index.html"> <span class="icon-home"></span> Home</a> 
 				<a href="#"><span class="icon-user"></span> My Account</a> 
-				<a href="<?php echo base_url();?>home/registration"><span class="icon-edit"></span> Free Register </a> 
+				<?php if(!$this->session->userdata('Email')){ ?>
+					<a href="<?php echo base_url();?>home/registration"><span class="icon-edit"></span> Free Register </a> 
+				<?php } ?>
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 				<a href="cart.html"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"> $448.42</span></a>
 			</div>
@@ -106,16 +108,19 @@ Navigation Bar Section
 			<ul class="nav pull-right">
 			<li class="dropdown">
 				<?php if($this->session->userdata('Email')){ ?>
-					<a class="dropdown-toggle" href="#"><span class="icon-lock"></span> Hi, <?php echo $this->session->userdata('FirstName')." ".$this->session->userdata('LastName') ?> <b class="caret"></b></a>
-					<a class="dropdown-toggle" href="<?php echo base_url()."home/signout"; ?>"><span class="icon-lock"></span> Sign Out <b class="caret"></b></a>
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Hi, <?php echo $this->session->userdata('FirstName')." ".$this->session->userdata('LastName') ?> <b class="caret"></b></a>
+					<div class="dropdown-menu">
+						<div class="control-group">
+							<a href="<?php echo base_url()."home/signout"; ?>">Sign Out</a>
+					  	</div>
+					</div>
 				<?php }else{ ?>
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
-				<?php } ?>
-				<div class="dropdown-menu">
-					<div class="control-group">
-						<input type="email" class="span2" id="inputLoginEmail" placeholder="Email">
-						<span class="error" id="LoginEmail_err" style="color:red; display:none;"></span>
-				  	</div>
+					<div class="dropdown-menu">
+						<div class="control-group">
+							<input type="email" class="span2" id="inputLoginEmail" placeholder="Email">
+							<span class="error" id="LoginEmail_err" style="color:red; display:none;"></span>
+					  	</div>
 					  <div class="control-group">
 						<input type="password" class="span2" id="inputLoginPassword" placeholder="Password">
 						<span class="error" id="LoginPassword_err" style="color:red; display:none;"></span>
@@ -127,7 +132,9 @@ Navigation Bar Section
 						<button type="submit" id="LoginButton" class="shopBtn btn-block">Sign in</button>
 						<span class="error" id="Loginerror_err" style="color:red; display:none;"></span>
 					  </div>
-				</div>
+					</div>
+				<?php } ?>
+				
 			</li>
 			</ul>
 		  </div>

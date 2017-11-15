@@ -33,14 +33,14 @@ class Home extends CI_Controller {
 
 	public function registration()
 	{
-		if(!$this->session->userdata()){
+		if(!$this->session->userdata("Email")){
 			$this->load->view('common/header');
 			$this->load->view('registration');
 			$this->load->view('common/footer');
 		}else{
 			redirect(base_url()."home/", "refresh");
 		}
-		
+
 	}
 
 	public function saveRegistrationInfo(){
